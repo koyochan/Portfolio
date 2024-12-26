@@ -21,9 +21,10 @@ import '@fontsource-variable/inter';
 
 <style is:inline>
   :root {
-     --aw-font-sans: 'Nunito', sans-serif;
-  --aw-font-serif: 'Roboto Slab', serif;
-  --aw-font-heading: 'Poppins', sans-serif;
+    /* ここは元のライトモードのまま */
+    --aw-font-sans: 'Nunito', sans-serif;
+    --aw-font-serif: 'Roboto Slab', serif;
+    --aw-font-heading: 'Poppins', sans-serif;
 
     --aw-color-primary: rgb(1 97 239);
     --aw-color-secondary: rgb(1 84 207);
@@ -34,30 +35,38 @@ import '@fontsource-variable/inter';
     --aw-color-text-muted: rgb(16 16 16 / 66%);
     --aw-color-bg-page: rgb(255 255 255);
 
+    /* ダークモード用の “標準” 背景色はデフォルトのままでも可 */
     --aw-color-bg-page-dark: rgb(3 6 32);
 
     ::selection {
       background-color: lavender;
+      color: inherit;
     }
   }
 
+  /* ダークモード */
   .dark {
-    --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-font-sans: 'Inter Variable', sans-serif;
+    --aw-font-serif: 'Inter Variable', serif;
+    --aw-font-heading: 'Inter Variable', sans-serif;
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    /* 背景を「緑っぽい黒」に (例: #021B08 / rgb(2,27,8) など) */
+    --aw-color-bg-page: rgb(2, 27, 8);
 
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(3 6 32);
+    /* 文字は読みやすいよう淡めの黄緑系 (例: #BFE8BF / rgb(191,232,191) など) */
+    --aw-color-text-heading: rgb(191, 232, 191);
+    --aw-color-text-default: rgb(191, 232, 191);
+    --aw-color-text-muted: rgba(191, 232, 191, 0.66);
 
+    /* テーマカラーも必要に応じて緑寄りに変更 */
+    --aw-color-primary: rgb(88, 195, 88);
+    --aw-color-secondary: rgb(78, 156, 78);
+    --aw-color-accent: rgb(109, 217, 109);
+
+    /* 選択時の背景を少し明るめの緑に、文字は黒系 */
     ::selection {
-      background-color: black;
-      color: snow;
+      background-color: rgb(88, 195, 88);
+      color: rgb(10, 10, 10);
     }
   }
 </style>
