@@ -300,3 +300,30 @@ Initially created by [onWidget](https://onwidget.com) and maintained by a commun
 **AstroWind** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.
 
 https://docs.astro.build/ja/recipes/i18n/
+
+src/components/widget/Header.astro
+
+```
+{showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
+      {
+        showRssFeed && (
+          <a
+            class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+            aria-label="RSS Feed"
+            href={getAsset('/rss.xml')}
+          >
+            <Icon name="tabler:rss" class="w-5 h-5" />
+          </a>
+        )
+      }
+      <!-- 言語切り替えボタン --> //実際の変更はまだ
+      {showLanguageSwitcher && (
+        <button
+          class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+          aria-label="Language Switcher"
+        >
+          <Icon name="tabler:language" class="w-5 h-5" />
+        </button>
+      )}
+    </div>
+```
