@@ -11,7 +11,7 @@ import { UI } from 'astrowind:config';
     } else {
       document.documentElement.classList.remove('dark');
     }
-    const matches = document.querySelectorAll('[data-aw-toggle-color-scheme] > input');
+    const matches = document.querySelectorAll('[] > input');
 
     if (matches && matches.length) {
       matches.forEach((elem) => {
