@@ -4,6 +4,8 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
+import Header from '~/components/widgets/Header.astro';
+
 const metadata = {
   title: 'Contact',
 };
@@ -13,6 +15,27 @@ const metadata = {
   <!-- HeroText Widget ******************* -->
 
   <HeroText tagline="Contact" title="Let's Connect!" />
+
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '/' },
+        { text: 'About', href: '/#about' },
+        { text: 'Resume', href: '/#resume' },
+        { text: 'Porfolio', href: '/#porfolio' },
+        { text: 'Blog', href: '/#blog' },
+        { text: 'Github', href: 'https://github.com/koyochan' },
+      ]}
+      actions={[
+        {
+          text: 'Hire me',
+          href: 'mailto:kotkobay42tokyo@outlook.com?subject=%E6%8B%9B%E8%81%98%E3%81%AE%E3%81%94%E4%BC%9A%E8%A9%B1&body=%E3%81%93%E3%81%AE%E3%81%9F%E3%81%B3%E3%81%AF%E6%8B%9B%E8%81%98%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85%E3%82%92%E3%81%97%E3%81%9F%E3%81%84%E3%81%A8%E6%80%9D%E3%81%84%E3%81%BE%E3%81%99%E3%80%82',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
 
   <ContactUs
     id="form"
@@ -45,20 +68,6 @@ const metadata = {
   <Features2
     title="We are here to help!"
     items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
       {
         title: 'Phone',
         description: '+1 (234) 567-890',
