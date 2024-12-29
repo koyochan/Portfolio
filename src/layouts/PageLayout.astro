@@ -16,7 +16,23 @@ const { metadata } = Astro.props;
 
 <Layout metadata={metadata}>
   <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+    <Header
+    links={[
+        { text: 'Home', href: '/' },
+        { text: 'About', href: '/#about' },
+        { text: 'Resume', href: '/#resume' },
+        { text: 'Porfolio', href: '/#porfolio' },
+        { text: 'Blog', href: '/#blog' },
+        { text: 'Github', href: 'https://github.com/koyochan' },
+      ]}
+      actions={[
+        {
+          text: 'Hire me',
+          href: '/contact',
+        },
+      ]}
+      isSticky
+      showToggleTheme/>
   </slot>
   <main>
     <slot />
