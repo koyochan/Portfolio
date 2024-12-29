@@ -1,4 +1,5 @@
-declare module 'astrowind:config' {
+// TyepeScriptの型定義
+declare module 'portfolio:config' {
   import type { SiteConfig, I18NConfig, MetaDataConfig, AppBlogConfig, UIConfig, AnalyticsConfig } from './config';
 
   export const SITE: SiteConfig;

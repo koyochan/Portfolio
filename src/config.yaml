@@ -1,15 +1,17 @@
 site:
   name: KotaKobayashi
+  # サイトの公開URL 
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
 
+  # 秘匿性の低い情報のため記載してよし
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
+    default: KotaKobayashi
     template: '%s — AstroWind'
   description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:

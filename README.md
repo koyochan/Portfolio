@@ -337,9 +337,6 @@ frontmatter: Markdown記事のタイトルや日付、タグなどのメタデ�
 AST
 
 
-ライブラリー
-import partytown from '@astrojs/partytown';
-
 Markdown → HTML 変換の全体の流れ
 	1.	MarkdownをASTに変換（Remark）。
 	2.	ASTを操作してデータを追加または変更（RemarkPlugin）。
@@ -350,6 +347,9 @@ Markdown → HTML 変換の全体の流れ
 ## ライブラリー
 
 import sitemap from '@astrojs/sitemap';
+-> sitemapを作成するライブラリーindexを作成し、その中に、index-0のような構成。
+import partytown from '@astrojs/partytown';
+-> web workerといわれるメインスレッドと別に、外部スクリプトのスレッドを作成し、負荷を分裂させることができる。
 
 ## 静的サイトを開発段階で表示する
 
