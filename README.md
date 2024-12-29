@@ -49,6 +49,8 @@
   - [Contributing](#contributing)
   - [Acknowledgements](#acknowledgements)
   - [License](#license)
+  - [MEMO](#memo)
+  - [静的サイトを開発段階で表示する](#静的サイトを開発段階で表示する)
   - [URL](#url)
 
 </details>
@@ -328,7 +330,33 @@ src/components/widget/Header.astro
       )}
     </div>
 ```
+## MEMO
+
+frontmatter: Markdown記事のタイトルや日付、タグなどのメタデータ。
+AST
+
+Markdown → HTML 変換の全体の流れ
+	1.	MarkdownをASTに変換（Remark）。
+	2.	ASTを操作してデータを追加または変更（RemarkPlugin）。
+	3.	ASTをHTMLに変換（Rehype）。
+	4.	HTMLをさらにカスタマイズ（RehypePlugin）。
+	5.	最終的にHTMLとしてレンダリング。
+
+
+## 静的サイトを開発段階で表示する
+
+npm run dev
+-> 動的なサイトをホットリロードなどを用いて開発ようにサーバーを立てること。
+
+npm run build 
+-> 静的サイトを含めたプロジェクト全体のビルドファイルをdistディレクトリに提供する。
+
+npm serve dist
+-> distファイルを元にローカルサーバーを立てる。
+
 
 ## URL
 
 https://engineering.meetsmore.com/entry/2023/12/01/103600
+(AST)[https://ja.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E6%A7%8B%E6%96%87%E6%9C%A8]
+[MarkDown](https://docs.astro.build/ja/guides/markdown-content/)
