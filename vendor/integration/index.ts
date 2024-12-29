@@ -8,7 +8,7 @@ import loadConfig from './utils/loadConfig';
 export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegration => {
   let cfg: AstroConfig;
   return {
-    name: 'astrowind-integration',
+    name: 'portfolio-integration',
 
     hooks: {
       'astro:config:setup': async ({

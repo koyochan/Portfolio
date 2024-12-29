@@ -3,6 +3,8 @@ import { toString } from 'mdast-util-to-string';
 import { visit } from 'unist-util-visit';
 import type { MarkdownAstroData, RehypePlugin, RemarkPlugin } from '@astrojs/markdown-remark';
 
+// 英語の場合の読書時間の計算
+// 日本語の場合は、spaceがないので、計算不可
 export const readingTimeRemarkPlugin: RemarkPlugin = () => {
   return function (tree, file) {
     const textOnPage = toString(tree);
