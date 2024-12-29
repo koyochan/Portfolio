@@ -50,6 +50,7 @@
   - [Acknowledgements](#acknowledgements)
   - [License](#license)
   - [MEMO](#memo)
+  - [ライブラリー](#ライブラリー)
   - [静的サイトを開発段階で表示する](#静的サイトを開発段階で表示する)
   - [URL](#url)
 
@@ -335,6 +336,10 @@ src/components/widget/Header.astro
 frontmatter: Markdown記事のタイトルや日付、タグなどのメタデータ。
 AST
 
+
+ライブラリー
+import partytown from '@astrojs/partytown';
+
 Markdown → HTML 変換の全体の流れ
 	1.	MarkdownをASTに変換（Remark）。
 	2.	ASTを操作してデータを追加または変更（RemarkPlugin）。
@@ -342,6 +347,9 @@ Markdown → HTML 変換の全体の流れ
 	4.	HTMLをさらにカスタマイズ（RehypePlugin）。
 	5.	最終的にHTMLとしてレンダリング。
 
+## ライブラリー
+
+import sitemap from '@astrojs/sitemap';
 
 ## 静的サイトを開発段階で表示する
 
