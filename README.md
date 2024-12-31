@@ -51,6 +51,7 @@
   - [License](#license)
   - [MEMO](#memo)
   - [ライブラリー](#ライブラリー)
+  - [コンポーネント](#コンポーネント)
   - [静的サイトを開発段階で表示する](#静的サイトを開発段階で表示する)
   - [URL](#url)
 
@@ -354,6 +355,16 @@ import sitemap from '@astrojs/sitemap';
 -> sitemapを作成するライブラリーindexを作成し、その中に、index-0のような構成。
 import partytown from '@astrojs/partytown';
 -> web workerといわれるメインスレッドと別に、外部スクリプトのスレッドを作成し、負荷を分裂させることができる。
+
+## コンポーネント
+
+Content
+
+Hero
+
+Feature
+
+
 
 ## 静的サイトを開発段階で表示する
 
