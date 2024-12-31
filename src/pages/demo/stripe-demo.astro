@@ -1,0 +1,57 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import iconImage from '../assets/images/about-me.png';
+import TenXer_Project from '../assets/images/TenXer_Project.jpg';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+// import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Kota Kobayahsi portfolio',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '#' },
+        { text: 'About', href: '#about' },
+        { text: 'Resume', href: '#resume' },
+        { text: 'Porfolio', href: '#porfolio' },
+        { text: 'Blog', href: '#blog' },
+        { text: 'Github', href: 'https://github.com/koyochan' },
+      ]}
+      actions={[
+        {
+          text: 'Hire me',
+          href: '/contact',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <div>
+    <!-- Demo iframe -->
+    <iframe
+      src="https://livspect.com"
+      title="Project Demo"
+      width="100%"
+      height="600"
+      frameborder="0"
+      style="border: 1px solid #ccc; border-radius: 8px; margin-top: 20px;"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+</Layout>
