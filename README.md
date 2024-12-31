@@ -333,6 +333,10 @@ src/components/widget/Header.astro
 ```
 ## MEMO
 
+キャッチオールルート
+動的ルート
+slug
+
 frontmatter: Markdown記事のタイトルや日付、タグなどのメタデータ。
 AST
 
