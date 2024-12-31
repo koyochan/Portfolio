@@ -33,10 +33,15 @@
     "astro": "^4.16.2",
     "astro-embed": "^0.7.4",
     "astro-icon": "^1.1.1",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.0.1",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "stripe": "^17.4.0",
     "unpic": "^3.18.0"
   },
   "devDependencies": {
